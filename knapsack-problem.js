@@ -23,10 +23,10 @@ function solveKnapsack(size, items) {
     // Throw away unneeded solutions
     delete m[i - 2];
 
+    // Create new solution entry
+    m[i] = [];
+
     for(var j = 0; j <= size; j++) {
-
-      if(!m[i]) m[i] = [];
-
       var curCost   = items[i - 1][0];
       var curWeight = items[i - 1][1];
 
@@ -44,7 +44,6 @@ function solveKnapsack(size, items) {
 
   return m[items.length][size];
 }
-
 
 
 // section: Tests
