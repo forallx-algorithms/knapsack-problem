@@ -20,6 +20,9 @@ function solveKnapsack(size, items) {
   for(var z = 0; z <= size; z++) m[0][z] = 0;
 
   for(var i = 1; i <= items.length; i++) {
+    // Throw away unneeded solutions
+    delete m[i - 2];
+
     for(var j = 0; j <= size; j++) {
 
       if(!m[i]) m[i] = [];
@@ -54,3 +57,7 @@ var simpleProblem = [
 ];
 
 console.log("Case 1:", solveKnapsack(knapsackSize, simpleProblem) == 155, solveKnapsack(knapsackSize, simpleProblem));
+
+
+
+
