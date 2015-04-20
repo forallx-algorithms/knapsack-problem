@@ -1,5 +1,5 @@
 /*
-  Finds the optimal solution for the knapsack problem
+  Finds the optimal solution of the knapsack problem
   http://en.wikipedia.org/wiki/Knapsack_problem
 
   @author Evgeniy Kuznetsov
